@@ -70,7 +70,7 @@ function Shell({ children, onToast }: { children: ReactNode; onToast: (message: 
   return <div className="app-shell">
     <aside className="sidebar">
       <div className="brand">
-        <div className="brand-mark">dp</div>
+         <div className="brand-mark"><img src={`${import.meta.env.BASE_URL}disease-icon.png`} alt="" /></div>
         <div className="brand-copy"><strong>Disease Prediction</strong><span>Analytics lab</span></div>
       </div>
       <div className="nav-label">Workspace</div>
