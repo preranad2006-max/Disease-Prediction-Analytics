@@ -40,10 +40,11 @@ The input file should contain these columns:
 
 ## Run the Streamlit application
 
-Python dependencies are listed in `requirements.txt`.
+Python dependencies are declared in `pyproject.toml` and locked in `uv.lock`.
 
 ```bash
-streamlit run streamlit_app.py --server.port 5000
+uv sync
+uv run streamlit run streamlit_app.py --server.port 5000
 ```
 
 The sidebar contains the full workflow:
@@ -79,7 +80,8 @@ The sidebar contains the full workflow:
 ├── streamlit_app.py
 ├── data/
 │   └── sample_patient_data.csv
-├── requirements.txt
+├── pyproject.toml
+├── uv.lock
 ├── README.md
 └── artifacts/disease-prediction/
     └── React dashboard preview

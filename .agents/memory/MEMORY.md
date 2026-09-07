@@ -1,0 +1,1 @@
+- [Python publishing dependencies](python-publishing-dependencies.md) — top-level requirements.txt triggers Replit's pip install; use pyproject.toml and uv.lock instead.

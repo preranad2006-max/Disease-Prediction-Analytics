@@ -26,7 +26,7 @@ Educational healthcare analytics workspace that cleans patient datasets, compare
 
 - `streamlit_app.py` — complete Streamlit workflow, preprocessing, training, metrics, prediction, and risk explanation
 - `data/sample_patient_data.csv` — synthetic sample dataset for demos and viva walkthroughs
-- `requirements.txt` — Python package list for the Streamlit app
+- `pyproject.toml` and `uv.lock` — Python dependency declarations and lockfile for the Streamlit app
 - `artifacts/disease-prediction/src/` — polished React dashboard preview for the project surface
 
 ## Architecture decisions
