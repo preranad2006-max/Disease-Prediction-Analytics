@@ -1,12 +1,13 @@
-# [Project name]
+# Disease Prediction Analytics
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Educational healthcare analytics workspace that cleans patient datasets, compares classical ML models, and presents transparent probable-disease signals for decision-support demonstrations.
 
 ## Run & Operate
 
 - `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
+- `streamlit run streamlit_app.py --server.port 5000` — run the Python ML dashboard
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
 - `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
 - Required env: `DATABASE_URL` — Postgres connection string
@@ -19,18 +20,29 @@ _Replace the heading above with the project's name, and this line with one sente
 - Validation: Zod (`zod/v4`), `drizzle-zod`
 - API codegen: Orval (from OpenAPI spec)
 - Build: esbuild (CJS bundle)
+- ML companion: Python, Pandas, NumPy, scikit-learn, Matplotlib, Seaborn, Streamlit
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `streamlit_app.py` — complete Streamlit workflow, preprocessing, training, metrics, prediction, and risk explanation
+- `data/sample_patient_data.csv` — synthetic sample dataset for demos and viva walkthroughs
+- `requirements.txt` — Python package list for the Streamlit app
+- `artifacts/disease-prediction/src/` — polished React dashboard preview for the project surface
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- The Streamlit app is the source of truth for the requested Python ML workflow; the React artifact provides the polished preview experience.
+- Preprocessing is kept inside scikit-learn pipelines to avoid train/test leakage and keep inference consistent.
+- Risk level is presented as a separate, transparent screening heuristic rather than being conflated with model confidence.
+- The bundled sample data is synthetic and deliberately labeled as educational, not clinically representative.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+- Upload and validate CSV/XLSX patient data.
+- Explore disease distribution, demographics, and risk-factor patterns.
+- Train Logistic Regression, Decision Tree, Random Forest, Naive Bayes, and SVM baselines.
+- Compare Accuracy, Precision, Recall, and weighted F1-Score.
+- Generate a probable disease signal with model confidence, class probabilities, contributing screening factors, and exportable prediction history.
 
 ## User preferences
 
@@ -38,7 +50,9 @@ _Populate as you build — explicit user instructions worth remembering across s
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- The project intentionally does not present predictions as clinical diagnoses.
+- Naive Bayes uses a non-negative preprocessing path; the other models use standardized numeric features.
+- Excel uploads require `openpyxl`.
 
 ## Pointers
 

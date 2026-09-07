@@ -1,0 +1,41 @@
+Patient_ID,Age,Gender,Symptoms,Blood_Pressure,Sugar_Level,Cholesterol,Medical_History,Disease
+P-1001,67,Female,Chest pain and breathlessness,154,128,248,Hypertension,Heart Disease
+P-1002,45,Male,Frequent thirst and fatigue,138,168,226,Family diabetes,Diabetes
+P-1003,29,Female,Headache and nausea,118,91,172,None,Healthy
+P-1004,72,Male,Weakness and facial droop,168,116,232,Hypertension,Stroke
+P-1005,54,Female,Joint pain and morning stiffness,128,99,204,Arthritis,Arthritis
+P-1006,61,Male,Chest pain and sweating,148,132,254,Smoking,Heart Disease
+P-1007,38,Female,Frequent urination and thirst,124,154,198,Family diabetes,Diabetes
+P-1008,24,Male,No significant symptoms,112,86,166,None,Healthy
+P-1009,70,Female,Slurred speech and imbalance,162,121,246,Hypertension,Stroke
+P-1010,58,Male,Knee pain and stiffness,130,102,218,Arthritis,Arthritis
+P-1011,49,Female,Palpitations and chest discomfort,142,119,238,High cholesterol,Heart Disease
+P-1012,33,Male,Blurred vision and thirst,126,146,192,Family diabetes,Diabetes
+P-1013,41,Female,No significant symptoms,116,93,178,None,Healthy
+P-1014,76,Male,Arm weakness and confusion,174,136,261,Hypertension,Stroke
+P-1015,63,Female,Joint swelling and pain,134,98,224,Arthritis,Arthritis
+P-1016,57,Male,Shortness of breath on exertion,146,124,242,Smoking,Heart Disease
+P-1017,52,Female,Increased thirst and tiredness,136,176,230,Obesity,Diabetes
+P-1018,31,Male,No significant symptoms,110,89,164,None,Healthy
+P-1019,68,Female,Sudden dizziness and speech changes,158,128,239,Hypertension,Stroke
+P-1020,47,Male,Back and knee pain,122,97,210,Arthritis,Arthritis
+P-1021,59,Female,Chest tightness and fatigue,144,112,252,High cholesterol,Heart Disease
+P-1022,43,Male,Frequent urination and hunger,130,159,218,Family diabetes,Diabetes
+P-1023,27,Female,No significant symptoms,115,82,158,None,Healthy
+P-1024,74,Male,Loss of balance and weakness,166,119,240,Hypertension,Stroke
+P-1025,56,Female,Hand and knee stiffness,126,94,216,Arthritis,Arthritis
+P-1026,65,Male,Chest pressure and breathlessness,152,141,264,Smoking,Heart Disease
+P-1027,36,Female,Fatigue and blurred vision,128,151,206,Family diabetes,Diabetes
+P-1028,22,Male,No significant symptoms,108,80,151,None,Healthy
+P-1029,69,Female,Facial weakness and severe headache,160,124,237,Hypertension,Stroke
+P-1030,48,Male,Joint pain after activity,124,101,208,Arthritis,Arthritis
+P-1031,53,Female,Irregular heartbeat and fatigue,140,117,244,High cholesterol,Heart Disease
+P-1032,46,Male,Thirst and slow wound healing,134,183,236,Family diabetes,Diabetes
+P-1033,35,Female,No significant symptoms,117,90,171,None,Healthy
+P-1034,78,Male,Confusion and one-sided weakness,178,130,270,Hypertension,Stroke
+P-1035,60,Female,Shoulder and knee pain,132,96,222,Arthritis,Arthritis
+P-1036,62,Male,Pressure in chest and nausea,150,126,256,Smoking,Heart Disease
+P-1037,39,Female,Frequent thirst and fatigue,129,162,212,Obesity,Diabetes
+P-1038,26,Male,No significant symptoms,113,85,169,None,Healthy
+P-1039,71,Female,Speech difficulty and weakness,164,122,249,Hypertension,Stroke
+P-1040,50,Male,Stiff joints and reduced mobility,127,100,214,Arthritis,Arthritis

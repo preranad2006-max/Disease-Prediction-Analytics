@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Disease Prediction Analytics"
+description = "A professional healthcare analytics dashboard for cleaning patient data, exploring disease patterns, comparing machine-learning models, and generating transparent risk-oriented predictions for educational decision support."
+version = "1.0.0"
+id = "artifacts/disease-prediction"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19838
+
+[services.development]
+run = "pnpm --filter @workspace/disease-prediction run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/disease-prediction", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/disease-prediction/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19838"
+BASE_PATH = "/"
