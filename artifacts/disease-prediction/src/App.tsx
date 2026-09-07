@@ -2,7 +2,6 @@ import { type ReactNode, useMemo, useRef, useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
-import { TooltipProvider } from '@/components/ui/tooltip';
 import { Activity, AlertTriangle, BarChart3, BrainCircuit, Check, ChevronRight, CircleHelp, ClipboardList, Database, Download, FileSpreadsheet, FileUp, Filter, HeartPulse, Info, Layers3, LineChart, ListChecks, Menu, Network, Play, RefreshCw, Search, ShieldCheck, SlidersHorizontal, Sparkles, Table2, Target, Upload, UserRound, UsersRound, X } from 'lucide-react';
 import { Link, Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
 import NotFound from '@/pages/not-found';
@@ -308,7 +307,7 @@ function RouterContent({ onToast }: { onToast: (message: string) => void }) {
 function App() {
   const [toast, setToast] = useState('');
   const onToast = (message: string) => { setToast(message); window.setTimeout(() => setToast(''), 2600); };
-  return <QueryClientProvider client={queryClient}><TooltipProvider><WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}><ErrorBoundary resetKey={window.location.pathname}><RouterContent onToast={onToast} /></ErrorBoundary></WouterRouter><Toaster />{toast && <div className="toast-note" role="status" data-testid="status-toast">{toast}</div>}</TooltipProvider></QueryClientProvider>;
+  return <QueryClientProvider client={queryClient}><WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}><ErrorBoundary resetKey={window.location.pathname}><RouterContent onToast={onToast} /></ErrorBoundary></WouterRouter><Toaster />{toast && <div className="toast-note" role="status" data-testid="status-toast">{toast}</div>}</QueryClientProvider>;
 }
 
 export default App;
